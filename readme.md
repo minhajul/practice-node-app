@@ -11,14 +11,9 @@ A simple API application with MySQL integration for user management.
 
 ### Quick Start
 
-### 1. Clone & Install
-```bash
-git clone https://github.com/yourusername/node-mysql-api.git
-cd node-mysql-api
-npm install
-```
+Clone the project and follow the steps below to run the application.
 
-### 2. Configure Database
+#### Configure Database
 Create .env file:
 
 ```
@@ -29,7 +24,7 @@ DB_NAME=practice_app
 PORT=3000
 ```
 
-### Setup Database & Seed Data
+#### Setup Database & Seed Data
 
 ```npm run seed```
 
@@ -38,13 +33,13 @@ This will:
 - Create users table if not exists
 - Insert 3 test users
 
-### Start Application
+#### Start Application
 
 ```npm run start```
 
 Server runs at ```http://localhost:3000```
 
-### API Documentation
+#### API Documentation
 
 ### Health Check
 ```GET /health```
@@ -56,7 +51,7 @@ Server runs at ```http://localhost:3000```
 }
 ```
 
-### Get all users
+#### Get all users
 ```GET /users```
 
 ```json
@@ -73,4 +68,3 @@ Server runs at ```http://localhost:3000```
   }
 ]
 ```
-
