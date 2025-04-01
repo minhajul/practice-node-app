@@ -3,9 +3,10 @@ require('dotenv').config();
 const pool = require('./config/db');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.get('/', async (req, res) => {
+// Root endpoint with API information
+app.get('/', (req, res) => {
     res.status(200).json({
         status: 'ok',
         version: '1.0.0',
@@ -25,6 +26,7 @@ app.get('/health', async (req, res) => {
         connection.release();
         res.status(200).json({status: 'healthy', database: 'connected'});
     } catch (error) {
+        console.error('Health check failed:', error);
         res.status(500).json({status: 'unhealthy', database: 'disconnected'});
     }
 });
@@ -35,10 +37,14 @@ app.get('/users', async (req, res) => {
         const [rows] = await pool.query('SELECT * FROM users');
         res.status(200).json(rows);
     } catch (error) {
+        console.error('Database query failed:', error);
         res.status(500).json({error: 'Database query failed'});
     }
 });
 
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = app;
