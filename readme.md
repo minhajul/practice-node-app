@@ -1,4 +1,4 @@
-## Node.js MySQL API
+## Node.js MySQL App
 
 A simple API application with MySQL integration for user management.
 
