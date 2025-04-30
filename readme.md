@@ -13,6 +13,16 @@ A simple API application with MySQL integration for user management.
 
 Clone the project and follow the steps below to run the application.
 
+#### Clone the Repository
+
+```
+git clone https://github.com/minhajul/practice-node-app.git
+cd practice-node-app
+```
+
+#### Install Dependencies
+```npm install```
+
 #### Configure Database
 Create .env file:
 
