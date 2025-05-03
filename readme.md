@@ -14,6 +14,7 @@ A simple API application with MySQL integration for user management.
 Clone the project and follow the steps below to run the application.
 
 #### Start Docker
+
 I am using Docker Compose to run the PostgreSQL database. Start Docker and run the command below to get your database up and running.
 
 ```docker-compose up --build -d```
@@ -30,8 +31,8 @@ DATABASE_URL=postgresql://admin:admin@localhost:5431/practice_db
 ```npm run seed```
 
 This will:
-- Create database if missing
-- Create users table if not exists
+- Create a database if missing
+- Create a users' table if not exists
 - Insert 3 test users
 
 #### Start Application
